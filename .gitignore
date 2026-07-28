@@ -1,0 +1,12 @@
+# Compiled Java files
+*.class
+
+# IntelliJ
+.idea/
+out/
+
+# Maven
+target/
+
+# Gradle
+build/
