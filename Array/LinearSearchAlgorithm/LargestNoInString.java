@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/second-largest-digit-in-a-string/
 import java.util.Scanner;
-public class LargestNoInArray {
+public class LargestNoInString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a String : ");
