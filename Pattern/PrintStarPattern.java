@@ -1,13 +1,13 @@
 public class PrintStarPattern {
     public static void main(String[] args) {
-//printStarPattern();
-//printInvertedStar();
-//printHalfPyramid();
-//printCharPattern();
+//printStarPattern(5);
+//printInvertedStar(5);
+//printHalfPyramid(5);
+//printCharPattern(5);
     }
 
-    static void printStarPattern() {
-        int n=4;
+    static void printStarPattern(int n) {
+
        for(int i=1; i<=n; i++) {
            for(int s=1; s<=i; s++) {
                System.out.print("*"+" ");
@@ -17,8 +17,7 @@ public class PrintStarPattern {
       }
 
 
-    static void printInvertedStar() {
-        int n=5;
+    static void printInvertedStar(int n) {
         for(int i=1; i<=n; i++) {
             for(int s=1; s<=n-i+1; s++) {
                 System.out.print("*"+" ");
@@ -27,8 +26,7 @@ public class PrintStarPattern {
         }
     }
 
-    static void printHalfPyramid() {
-        int n = 5;
+    static void printHalfPyramid(int n) {
         for(int i=1; i<=n; i++) {
             for(int ch=1; ch<=i; ch++) {
                 System.out.print(ch);
@@ -37,9 +35,8 @@ public class PrintStarPattern {
         }
     }
 
-    static void printCharPattern() {
+    static void printCharPattern(int n) {
         char ch='A';
-        int n=5;
         for(int i=1; i<=5; i++) {
             for(int j=1; j<=i; j++) {
                 System.out.print(ch);
