@@ -169,7 +169,7 @@ public class PrintStarPattern {
                 }
                 System.out.println();
             }
-        }ad
+        }
         }
 
 
