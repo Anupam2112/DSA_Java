@@ -1,8 +1,10 @@
 public class PrintAdvancedStarPattern {
     public static void main(String[] args) {
-
-     //printHollowStarPattern(4,5);
-        printInvertedRightAngleTringle(5);
+        //printHollowStarPattern(4,5);
+        //printInvertedRightAngleTringle(5);
+        //printInvertedNumPattern(5);
+        //printFloydsTrianle(5);
+        printReverseFloydsTriangle(5);
     }
 
     static void printHollowStarPattern(int row, int col) {
@@ -33,8 +35,31 @@ public class PrintAdvancedStarPattern {
     static void printInvertedNumPattern(int n) {
         for(int i=1; i<=n; i++) {
             for(int j=1; j<=n-i+1; j++) {
-                System.out.println(j);
+                System.out.print(j);
             }
+            System.out.println();
+        }
+    }
+
+    static void printFloydsTrianle(int n) {
+        int counter = 1;
+        for(int i=1; i<=n; i++) {
+            for(int j=1; j<=i; j++) {
+                System.out.print(counter+" ");
+                counter++;
+            }
+            System.out.println();
+        }
+    }
+
+    static void printReverseFloydsTriangle(int n) {
+        int counter = 15;
+        for(int i=1; i<=n; i++) {
+            for(int j=1; j<=n-i+1; j++) {
+                System.out.print(counter+" ");
+                counter--;
+            }
+            System.out.println();
         }
     }
 }
