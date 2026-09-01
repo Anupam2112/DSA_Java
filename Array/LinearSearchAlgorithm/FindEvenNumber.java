@@ -36,6 +36,14 @@ import java.util.Scanner;
             }
 
             static int digit(int num) {
+
+                if(num < 0) {
+                    num = num * -1;
+                }
+
+                if(num == 0) {
+                    return 1;
+                }
                 int n = 0;
                 while(num>0) {
                     n++;
