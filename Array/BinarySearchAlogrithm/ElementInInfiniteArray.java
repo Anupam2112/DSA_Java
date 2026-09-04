@@ -1,3 +1,5 @@
+//Element in Infinite Array
+
 public class ElementInInfiniteArray {
     public static void main(String[] args) {
         int[] arr = {2, 3, 5, 7, 9, 11, 14, 18, 21, 25, 29, 32, 37, 41, 45, 50};
