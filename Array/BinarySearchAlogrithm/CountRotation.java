@@ -7,24 +7,15 @@ public class CountRotation {
 
     static int rotationCount(int[] arr) {
         int pivot = pivot(arr);
-        if(pivot == -1) {
-            return 0;
-        }
-        int count  = 0;
-
-        for(int i=0; i <= pivot; i++) {
-          count += 1;
-        }
-        return count;
+        return pivot+1;
     }
 
     static int pivot(int[] arr) {
-        int st = 0;
-        int ed = arr.length-1;
-
         if(arr.length <= 1) {
             return -1;
         }
+        int st = 0;
+        int ed = arr.length-1;
 
         while(st <= ed) {
             int mid = st+(ed-st)/2;
