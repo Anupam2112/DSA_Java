@@ -2,15 +2,15 @@
 
 public class RotatedSortedArray {
     public static void main(String[] args) {
-        int[] nums = {4, 5, 6, 7, 0, 1, 2};
-        int target = 0;
+        int[] nums = {2, 9, 2, 2, 2, 2};
+        int target = 2;
 
         int index = search(nums, target);
         System.out.println(index);
     }
 
     static int search(int[] nums, int target) {
-          int pivot = pivot(nums);
+          int pivot = pivotInDuplicateArrays(nums);
 
         if(pivot == -1) {
             // do the normal binary search
@@ -28,6 +28,8 @@ public class RotatedSortedArray {
           return binarySearch(nums, target, pivot+1, nums.length-1);
     }
 
+
+    //Code for the normal array
     static  int pivot(int[] nums) {
         int st = 0;
         int ed = nums.length-1;
@@ -47,6 +49,41 @@ public class RotatedSortedArray {
                 ed = mid-1;
             } else {
                 st = mid+1;
+            }
+        }
+        return -1;
+    }
+
+//Code for the duplicate elements in the array
+    static int pivotInDuplicateArrays(int[] nums) {
+        int st = 0;
+        int ed = nums.length-1;
+
+        while(st <= ed) {
+            int mid = st+(ed-st)/2;
+
+            if(mid < ed && nums[mid] > nums[mid+1]) {
+                return mid;
+            }
+
+            if(mid > st && nums[mid] < nums[mid-1]) {
+                return mid-1;
+            }
+
+            if(nums[mid] == nums[st] && nums[mid] == nums[ed]) {
+                if(nums[st] > nums[st+1]) {
+                    return st;
+                }
+                st++;
+
+                if(nums[ed] < nums[ed-1]) {
+                    return ed-1;
+                }
+                ed--;
+            } else if(nums[st] < nums[mid] || nums[mid] == nums[st] && nums[mid] > nums[ed]) {
+                st = mid+1;
+            }else {
+                ed = mid-1;
             }
         }
         return -1;
