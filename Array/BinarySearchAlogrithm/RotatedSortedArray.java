@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+//https://leetcode.com/problems/search-in-rotated-sorted-array/
 
 public class RotatedSortedArray {
     public static void main(String[] args) {
